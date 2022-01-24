@@ -1,0 +1,16 @@
+.store-header {
+  background-color: var(--light-blue);
+  min-height: 120px;
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.store-header h1 {
+  font-family: "Sedgwick Ave", "Outfit", Arial, Helvetica, sans-serif;
+  color: white;
+}

@@ -1,0 +1,27 @@
+.categories-list {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav {
+  height: 100%;
+}
+
+.categories-list li {
+  font-size: 1.2rem;
+}
+
+.categories-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.categories-list a:hover {
+  color: var(--main-yellow);
+  transform: scale(1.05);
+}
