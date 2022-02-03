@@ -6,6 +6,10 @@ a {
   padding-left: 20px;
 }
 
-.navbar {
-  font-size: 1.1em;
+.navbar-brand {
+  font-family: "Supermercado One", Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand svg {
+  margin-right: 10px;
 }

@@ -1,0 +1,19 @@
+.filters-bar {
+  background-color: rgb(7, 179, 179);
+}
+.filters-bar .dropdown {
+  width: 100%;
+  color: white;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters-bar h4 {
+  /* font-family: "Supermercado One"; */
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 0;
+}

@@ -1,11 +1,11 @@
 import { Card, Button } from "react-bootstrap";
 import "./ProductsList.css";
-import StarRatingComponent from "react-star-rating-component";
+import StarRatings from "react-star-ratings";
 
 const ProductsList = ({ products }) => {
   return (
     <ul className="products-container mt-5">
-      {products.map(({ image, id, title, price, description, rating }) => {
+      {products.map(({ image, id, title, price, rating }) => {
         return (
           <li key={id}>
             <Card>
@@ -14,16 +14,20 @@ const ProductsList = ({ products }) => {
                 src={image || "https://via.placeholder.com/350x150"}
               />
               <Card.Title>{title}</Card.Title>
-              <div className="productPriceAndRating">
+              <div className="productPriceAndRating mb-3">
                 <h4 className="text-success mb-0">{`$${price}`}</h4>
                 <div className="stars-container">
-                  <StarRatingComponent
-                    name="rate"
-                    value={Number(rating.rate)}
-                    starColor="yellow"
-                    emptyStarColor="grey"
-                    size={40}
-                  />{" "}
+                  <abbr title={rating.rate}>
+                    <StarRatings
+                      numberOfStars={5}
+                      rating={Number(rating.rate)}
+                      starRatedColor="yellow"
+                      emptyStarColor="grey"
+                      name="rating"
+                      starDimension="20px"
+                      starSpacing="0px"
+                    />
+                  </abbr>{" "}
                   ({rating.count})
                 </div>
               </div>

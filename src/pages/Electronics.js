@@ -2,7 +2,7 @@ import ProductsList from "../components/ProductsList";
 import fetchProducts from "../utils/fetchProducts";
 import { useEffect, useState } from "react";
 import LoadingIcon from "../components/Icons/LoadingIcon";
-import CurrentCategory from "../components/CurrentCategory";
+import FiltersContainer from "../components/FiltersContainer";
 
 const Electronics = () => {
   const [products, setProducts] = useState("");
@@ -24,7 +24,7 @@ const Electronics = () => {
 
   return (
     <>
-      <CurrentCategory>Electronics</CurrentCategory>
+      <FiltersContainer category="electronics" />
       <div className="container">
         {isLoading ? (
           <LoadingIcon />
