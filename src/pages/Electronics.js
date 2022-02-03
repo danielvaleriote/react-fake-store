@@ -1,23 +1,47 @@
-import { useFetch } from "../hooks/useFetch";
-import LoadingIcon from "../components/layout/LoadingIcon";
-import Product from "../components/Product";
-import ProductsContainer from "../components/layout/ProductsContainer";
+import ProductsList from "../components/ProductsList";
+import fetchProducts from "../utils/fetchProducts";
+import { useEffect, useState } from "react";
+import LoadingIcon from "../components/Icons/LoadingIcon";
+import CurrentCategory from "../components/CurrentCategory";
 
-export default function Electronics() {
-  const { isLoading, products } = useFetch(
-    "https://fakestoreapi.com/products/category/electronics"
-  );
+const Electronics = () => {
+  const [products, setProducts] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState({ status: false, message: "" });
+
+  useEffect(() => {
+    fetchProducts("https://fakestoreapi.com/products/category/electronics")
+      .then((products) => {
+        setProducts(products);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setError({ status: true, message: err });
+        setIsLoading(false);
+        console.log(err);
+      });
+  }, []);
+
   return (
-    <div>
-      {isLoading ? (
-        <LoadingIcon />
-      ) : (
-        products.map((product) => (
-          <ProductsContainer>
-            <Product obj={product} key={product.id} />
-          </ProductsContainer>
-        ))
-      )}
-    </div>
+    <>
+      <CurrentCategory>Electronics</CurrentCategory>
+      <div className="container">
+        {isLoading ? (
+          <LoadingIcon />
+        ) : error.status ? (
+          <h2 className="text-center mt-5">
+            An error has ocurred :/
+            <br />
+            {error.message}
+          </h2>
+        ) : products.length === 0 ? (
+          <h2 className="text-center mt-5">Sorry, no products found :/</h2>
+        ) : (
+          <ProductsList products={products} />
+        )}
+      </div>
+    </>
   );
-}
+};
+
+export default Electronics;

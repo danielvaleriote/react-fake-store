@@ -1,9 +1,5 @@
-// import { useFetch } from "../hooks/useFetch";
+const MaleClothing = () => {
+  return <h1>MaleClothing</h1>;
+};
 
-export default function MaleClothing() {
-  return (
-    <div>
-      <h1>MaleClothing</h1>
-    </div>
-  );
-}
+export default MaleClothing;

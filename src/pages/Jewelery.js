@@ -1,9 +1,5 @@
-// import { useFetch } from "../hooks/useFetch";
+const Jewelery = () => {
+  return <h1>Jewelery</h1>;
+};
 
-export default function Jewelery() {
-  return (
-    <div>
-      <h1>Jewelery</h1>
-    </div>
-  );
-}
+export default Jewelery;

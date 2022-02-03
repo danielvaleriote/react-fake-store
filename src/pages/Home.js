@@ -1,15 +1,32 @@
-import { useFetch } from "../hooks/useFetch";
+import ProductsList from "../components/ProductsList";
+import fetchProducts from "../utils/fetchProducts";
+import { useEffect, useState } from "react";
+import LoadingIcon from "../components/Icons/LoadingIcon";
+import CurrentCategory from "../components/CurrentCategory";
 
-export default function Home() {
-  const { isLoading, products } = useFetch("https://fakestoreapi.com/products");
+const Home = () => {
+  const [products, setProducts] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetchProducts("https://fakestoreapi.com/products").then((products) => {
+      setProducts(products);
+      setIsLoading(false);
+    });
+  }, []);
 
   return (
-    <div>
-      <h1>Home</h1>
-      {!isLoading &&
-        products.map((product) => {
-          return <h2>{product.title}</h2>;
-        })}
-    </div>
+    <>
+      <CurrentCategory>Home</CurrentCategory>
+      <div className="container">
+        {isLoading ? (
+          <LoadingIcon />
+        ) : (
+          products && <ProductsList products={products} />
+        )}
+      </div>
+    </>
   );
-}
+};
+
+export default Home;

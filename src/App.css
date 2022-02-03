@@ -8,19 +8,3 @@ body {
   font-family: "Outfit", Arial, Helvetica, sans-serif;
   background-color: #efefef;
 }
-
-:root {
-  --light-blue: #3475f6;
-  --strong-blue: #153ab3;
-  --main-white: #e6f4f1;
-  --main-purple: #7269e5;
-  --main-yellow: #e6d26a;
-}
-
-.loading-icon-container {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20%;
-}
