@@ -1,5 +1,13 @@
+import ProductsPage from "../components/ProductsPage";
 const FemaleClothing = () => {
-  return <h1>FemaleClothing</h1>;
+  return (
+    <>
+      <ProductsPage
+        pageName="Female Clothing"
+        apiUrl="https://fakestoreapi.com/products/category/women's clothing"
+      />
+    </>
+  );
 };
 
 export default FemaleClothing;

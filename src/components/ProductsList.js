@@ -1,10 +1,11 @@
 import { Card, Button } from "react-bootstrap";
 import "./ProductsList.css";
 import StarRatings from "react-star-ratings";
+import { FaShoppingCart } from "react-icons/fa";
 
 const ProductsList = ({ products }) => {
   return (
-    <ul className="products-container mt-5">
+    <ul className="products-container mt-5 mb-5">
       {products.map(({ image, id, title, price, rating }) => {
         return (
           <li key={id}>
@@ -31,7 +32,9 @@ const ProductsList = ({ products }) => {
                   ({rating.count})
                 </div>
               </div>
-              <Button variant="outline-primary">Buy</Button>
+              <Button variant="outline-primary" className="fw-bold">
+                ADD TO CART <FaShoppingCart />
+              </Button>
             </Card>
           </li>
         );

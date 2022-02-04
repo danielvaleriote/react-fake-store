@@ -13,3 +13,7 @@ a {
 .navbar-brand svg {
   margin-right: 10px;
 }
+
+.nav-link {
+  padding: 3px;
+}

@@ -1,5 +1,14 @@
+import ProductsPage from "../components/ProductsPage";
+
 const Jewelery = () => {
-  return <h1>Jewelery</h1>;
+  return (
+    <>
+      <ProductsPage
+        pageName="Jewelery"
+        apiUrl="https://fakestoreapi.com/products/category/jewelery"
+      />
+    </>
+  );
 };
 
 export default Jewelery;

@@ -1,19 +1,76 @@
 .filters-bar {
-  background-color: rgb(7, 179, 179);
+  background-color: rgb(44, 179, 179);
+  /* rgb(17, 17, 17); */
+  padding-left: 30px;
+  padding-right: 30px;
 }
+
+.filters-bar .form-control {
+  margin: auto;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .filters-bar .dropdown {
+  border-top-left-radius: 0;
   width: 100%;
   color: white;
   padding: 5px;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.5fr;
   justify-content: space-between;
   align-items: center;
+  border-radius: 0px;
+}
+
+.dropdown-toggle {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.filters-bar button {
+  min-width: 100px;
+}
+
+@media (max-width: 720px) {
+  .filters-bar .dropdown {
+    grid-template-columns: 1fr 0.4fr;
+    gap: 0px;
+  }
+  .filters-bar h4 {
+    grid-column: 1/3;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .filters-bar .dropdown {
+    grid-template-columns: 1fr;
+    gap: 0;
+    row-gap: 10px;
+  }
+  .filters-bar h4 {
+    text-align: center;
+  }
+  .filters-bar .btn-group {
+    width: 100%;
+    grid-row: 3;
+  }
+  .dropdown-toggle,
+  .filters-bar .form-control {
+    border-radius: 4px;
+  }
 }
 
 .filters-bar h4 {
-  /* font-family: "Supermercado One"; */
   display: inline-block;
   margin-right: 20px;
   margin-bottom: 0;
+  color: rgb(235, 235, 235);
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
+  text-align: center;
+}
+
+.dropdown-item {
+  text-align: center;
 }
