@@ -65,7 +65,7 @@ const ProductsPage = ({ pageName, apiUrl }) => {
       setIsLoading(false);
       dispatch({ type: "LOADED" });
     });
-  }, []);
+  }, [apiUrl]);
 
   function changeHandle(target) {
     dispatch({
