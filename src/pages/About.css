@@ -19,6 +19,15 @@
   position: relative;
 }
 
+@media (max-width: 380px) {
+  .about-container {
+    padding: 0;
+  }
+  .lang-container {
+    border-radius: 0;
+  }
+}
+
 .credits {
   position: absolute;
   bottom: 0;
