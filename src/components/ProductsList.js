@@ -16,7 +16,7 @@ const ProductsList = ({ products }) => {
               />
               <Card.Title>{title}</Card.Title>
               <div className="productPriceAndRating mb-3">
-                <h4 className="text-success mb-0">{`$${price}`}</h4>
+                <h5 className="text-success mb-0">{`$${price}`}</h5>
                 <div className="stars-container">
                   <abbr title={rating.rate}>
                     <StarRatings

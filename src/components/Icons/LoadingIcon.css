@@ -1,6 +1,12 @@
 .loadingIconContainer {
   position: fixed;
-  top: 60%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media (max-width: 420px) {
+  .loadingIconContainer {
+    top: 90%;
+  }
 }
