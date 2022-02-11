@@ -19,7 +19,7 @@ const About = () => {
           <a rel="external" target="_blank" href="https://fakestoreapi.com/">
             Fake Store API
           </a>{" "}
-          using the data to showcase the front-end side of a simple store.
+          using the data to show the front-end side of a simple store.
         </p>
         <p className="text-muted credits">
           Project created by{" "}
