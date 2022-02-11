@@ -6,7 +6,7 @@ With the data fetched from the **API**, I displayed fictional products as an E-c
 
 - **Products sorting by price and rating;**
 
-- **Rating shown with five stars system using <a href="https://www.npmjs.com/package/react-star-ratings">react-star-ratings</a> module**;
+- **Rating shown with five stars system using <a rel="external" target="_blank" href="https://www.npmjs.com/package/react-star-ratings">react-star-ratings</a> module**;
 
 - **Products filtering by name;**
 
@@ -18,11 +18,11 @@ With the data fetched from the **API**, I displayed fictional products as an E-c
 
 ## About the API
 
-To fetch the data in this project, I used the <a href="https://fakestoreapi.com/">Fake Store API</a>, that returns an array of products containing: title, price, description, rating, id and image of the products.
+To fetch the data in this project, I used the <a rel="external" target="_blank" href="https://fakestoreapi.com/">**Fake Store API**</a>, that returns an array of products containing: title, price, description, rating, id and image of the products.
 
 
 
- ## The project can be seen <a href="https://react-store-project-danielvaleriote.netlify.app/">HERE</a>
+ ## The project can be seen <a rel="external" target="_blank" href="https://react-store-project-danielvaleriote.netlify.app/">HERE</a>
 
 
 
