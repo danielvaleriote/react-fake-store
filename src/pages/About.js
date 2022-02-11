@@ -44,7 +44,7 @@ const About = () => {
             target="_blank"
             href="https://github.com/DanielValeriote/react-fake-store"
           >
-            repositório do Gitub
+            repositório do Github
           </a>
           . Foram obtidos produtos fictícios de uma API chamada{" "}
           <a rel="external" target="_blank" href="https://fakestoreapi.com/">
