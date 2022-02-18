@@ -1,3 +1,9 @@
+## Demo
+
+![exemplo 1](./demo-image.png)
+
+
+
 ## React Fake Store (Front-end)
 
 With the data fetched from the **API**, I displayed fictional products as an E-commerce in a simple way, but with some features:
