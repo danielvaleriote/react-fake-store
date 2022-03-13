@@ -1,4 +1,4 @@
-import "./LoadingIcon.css";
+import "./LoadingIcon.scss";
 import SyncLoader from "react-spinners/SyncLoader";
 
 const LoadingIcon = ({ color }) => {

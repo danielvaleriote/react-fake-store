@@ -1,5 +1,5 @@
 import { Card, Button } from "react-bootstrap";
-import "./ProductsList.css";
+import "./ProductsList.scss";
 import StarRatings from "react-star-ratings";
 import { FaShoppingCart } from "react-icons/fa";
 

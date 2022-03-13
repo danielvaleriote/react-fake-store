@@ -1,7 +1,7 @@
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaReact } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "./Navbar.scss";
 
 const NavbarHeader = () => {
   return (

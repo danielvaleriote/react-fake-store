@@ -1,5 +1,5 @@
 import Container from "react-bootstrap/Container";
-import "./About.css";
+import "./About.scss";
 const About = () => {
   return (
     <Container className="about-container">
