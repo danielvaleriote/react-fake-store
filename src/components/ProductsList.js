@@ -3,7 +3,7 @@ import "./ProductsList.scss";
 import StarRatings from "react-star-ratings";
 import { FaShoppingCart } from "react-icons/fa";
 
-const ProductsList = ({ products }) => {
+const ProductsList = ({ products }) => {  
   return (
     <ul className="products-container mt-5 mb-5">
       {products.map(({ image, id, title, price, rating }) => {
