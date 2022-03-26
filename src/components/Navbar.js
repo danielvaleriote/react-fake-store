@@ -11,18 +11,14 @@ const NavbarHeader = () => {
       bg="dark"
       variant="dark"
       className="p-3 text"
-      // style={{ fontSize: "1.2rem" }}
     >
       <Container>
-        {/* Navbar Brand */}
         <Link to="/">
           <Navbar.Brand>
             {<FaReact size={40} color="cyan" />} React Store
           </Navbar.Brand>
         </Link>
-        {/* Responsive Navbar toggle button  */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        {/* Responsive Navbar */}
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
             <Nav.Item>
