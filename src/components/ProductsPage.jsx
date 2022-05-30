@@ -1,10 +1,10 @@
-import ProductsList from "../components/ProductsList";
+import ProductsList from "./ProductsList";
 import fetchProducts from "../utils/fetchProducts";
 import { useEffect, useState, useReducer } from "react";
-import LoadingIcon from "../components/Icons/LoadingIcon";
-import FiltersContainer from "../components/FiltersContainer";
+import LoadingIcon from "./Icons/LoadingIcon";
+import FiltersContainer from "./FiltersContainer.jsx";
 
-const Home = () => {
+const ProductsPage = ({ pageName, apiUrl }) => {
   const [products, setProducts] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
@@ -60,12 +60,12 @@ const Home = () => {
   });
 
   useEffect(() => {
-    fetchProducts("https://fakestoreapi.com/products").then((products) => {
+    fetchProducts(apiUrl).then((products) => {
       setProducts(products);
       setIsLoading(false);
       dispatch({ type: "LOADED" });
     });
-  }, []);
+  }, [apiUrl]);
 
   function changeHandle(target) {
     dispatch({
@@ -80,11 +80,11 @@ const Home = () => {
   return (
     <>
       <FiltersContainer
-        category="Home"
+        category={pageName.toUpperCase()}
         onClickHandle={sortProducts}
         onChangeHandle={changeHandle}
       />
-      <div className="container">
+      <main className="container main" style={{ position: "relative" }}>
         {isLoading ? (
           <LoadingIcon />
         ) : (
@@ -92,9 +92,9 @@ const Home = () => {
             <ProductsList products={state.filteredProducts} />
           )
         )}
-      </div>
+      </main>
     </>
   );
 };
 
-export default Home;
+export default ProductsPage;
