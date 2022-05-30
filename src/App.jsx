@@ -2,13 +2,13 @@ import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavbarHeader from "./components/Navbar";
-import About from "./pages/About";
-import Home from "./pages/Home";
-import Electronics from "./pages/Electronics";
-import Jewelery from "./pages/Jewelery";
-import MaleClothing from "./pages/MaleClothing";
-import FemaleClothing from "./pages/FemaleClothing";
-import Error from "./pages/Error";
+import About from "./pages/About.jsx";
+import Home from "./pages/Home.jsx";
+import Electronics from "./pages/Electronics.jsx";
+import Jewelery from "./pages/Jewelery.jsx";
+import MaleClothing from "./pages/MaleClothing.jsx";
+import FemaleClothing from "./pages/FemaleClothing.jsx";
+import Error from "./pages/Error.jsx";
 
 function App() {
   return (
