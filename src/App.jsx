@@ -1,7 +1,7 @@
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavbarHeader from "./components/Navbar";
+import {Navbar} from "./components";
 import About from "./pages/About.jsx";
 import Home from "./pages/Home.jsx";
 import Electronics from "./pages/Electronics.jsx";
@@ -13,7 +13,7 @@ import Error from "./pages/Error.jsx";
 function App() {
   return (
     <Router>
-      <NavbarHeader />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
