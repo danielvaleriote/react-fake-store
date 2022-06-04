@@ -1,8 +1,6 @@
-import ProductsList from "./ProductsList";
 import fetchProducts from "../utils/fetchProducts";
 import { useEffect, useState, useReducer } from "react";
-import LoadingIcon from "./Icons/LoadingIcon";
-import FiltersContainer from "./FiltersContainer.jsx";
+import {ProductsList, LoadingIcon, FiltersContainer, } from './'
 
 const ProductsPage = ({ pageName, apiUrl }) => {
   const [products, setProducts] = useState("");
